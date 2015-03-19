@@ -1,0 +1,16 @@
+[0m[1mDo you really want to destroy?[0m
+  Terraform will delete all your managed infrastructure.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  [1mEnter a value:[0m [0m
+[0m[1maws_security_group.barc-test: Refreshing state... (ID: sg-3b4fef56)[0m
+[0m[1maws_key_pair.barc: Refreshing state... (ID: barc)[0m
+[0m[1maws_instance.tomcat_barc: Refreshing state... (ID: i-537f34a3)[0m
+[0m[1maws_instance.tomcat_barc: Destroying...[21m[0m
+[0m[1maws_instance.tomcat_barc: Destruction complete[21m[0m
+[0m[1maws_security_group.barc-test: Destroying...[21m[0m
+[0m[1maws_key_pair.barc: Destroying...[21m[0m
+[0m[1maws_key_pair.barc: Destruction complete[21m[0m
+[0m[1maws_security_group.barc-test: Destruction complete[21m[0m
+[0m[1m[32m
+Apply complete! Resources: 0 added, 0 changed, 3 destroyed.[0m

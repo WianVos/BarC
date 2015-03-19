@@ -1,0 +1,29 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": ""
+  },
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-east-1",
+    "source_ami": "ami-988ad1f0",
+    "instance_type": "t1.micro",
+    "ssh_username": "ubuntu",
+    "ami_name": "packer-example {{timestamp}}"
+  }],
+  "provisioners": [{
+    "type": "chef-solo",
+    "cookbook_paths": ["./chef/cookbooks"],
+    "data_bags_path": "./chef/databags",
+    "run_list": [
+      "recipe[java]",
+      "recipe[tomcat]",
+      "recipe[tomcat::users]"
+    ],
+    "json": {"tomcat":{"user":"root","base_version":7}},
+    "prevent_sudo": false,
+    "skip_install": false
+  }]
+}

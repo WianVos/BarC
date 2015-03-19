@@ -1,0 +1,3 @@
+credentials_override.tf
+credentials*
+*.tfstate*

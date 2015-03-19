@@ -1,0 +1,8 @@
+{
+  "id": "allaccess",
+  "password": "supersecret",
+  "roles": [
+    "manager-gui",
+    "admin"
+  ]
+}
