@@ -32,3 +32,15 @@
 [0;32m    amazon-ebs: (Reading database ... 51117 files and directories currently installed.)[0m
 [0;32m    amazon-ebs: Preparing to unpack .../chef_12.1.1-1_amd64.deb ...[0m
 [0;32m    amazon-ebs: Unpacking chef (12.1.1-1) ...[0m
+[0;32m    amazon-ebs: Setting up chef (12.1.1-1) ...[0m
+[0;32m    amazon-ebs: Thank you for installing Chef![0m
+[0;32m    amazon-ebs: Creating directory: /tmp/packer-chef-solo[0m
+[0;32m    amazon-ebs: Creating directory: /tmp/packer-chef-solo/cookbooks-0[0m
+[0;32m    amazon-ebs: Creating directory: /tmp/packer-chef-solo/data_bags[0m
+[0;32m    amazon-ebs: Creating configuration file 'solo.rb'[0m
+[0;32m    amazon-ebs: Creating JSON attribute file[0m
+[0;32m    amazon-ebs: Executing Chef: sudo chef-solo --no-color -c /tmp/packer-chef-solo/solo.rb -j /tmp/packer-chef-solo/node.json[0m
+[0;32m    amazon-ebs: Starting Chef Client, version 12.1.1[0m
+[0;32m    amazon-ebs: Compiling Cookbooks...[0m
+[0;32m    amazon-ebs: Converging 11 resources[0m
+[0;32m    amazon-ebs: Recipe: java::openjdk[0m
