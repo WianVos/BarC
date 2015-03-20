@@ -5,9 +5,9 @@
 
 if [ ! -f ./profile_addition.sh ]; then
 	./install.sh
-	./profile_addition.sh
+	. ./profile_addition.sh
 else
-	./profile_addition.sh
+	. ./profile_addition.sh
 fi	
 # the Packer part
 PACKERBUILDLOG="../packer_build.log"

@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 #determine OS
 
 uname -a |grep -i linux
@@ -57,7 +56,7 @@ echo "writing profile_additions to file"
 
 cat <<EOF > profile_addition.sh
 #!/bin/bash
-export PATH=${PWD}/prereq/terraform:${PWD}/prereq/packer:${PWD}/gatling/bin:${PATH}
+export PATH=${PWD}/prereq/terraform:${PWD}/prereq/packer:${PWD}/prereq/gatling/bin:${PATH}
 EOF
 
 chmod +x ./profile_addition.sh
