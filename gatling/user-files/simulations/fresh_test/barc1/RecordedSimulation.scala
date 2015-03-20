@@ -8,8 +8,10 @@ import io.gatling.jdbc.Predef._
 
 class RecordedSimulation extends Simulation {
 
+	val BaseUrl = System.getProperty("baseurl")
+
 	val httpProtocol = http
-		.baseURL("http://ec2-54-92-231-114.compute-1.amazonaws.com:8080")
+		.baseURL(BaseUrl)
 		.inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.gif""", """.*\.jpeg""", """.*\.jpg""", """.*\.ico""", """.*\.woff""", """.*\.(t|o)tf""", """.*\.png"""), WhiteList())
 		.acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
 		.acceptEncodingHeader("gzip, deflate, sdch")
@@ -21,7 +23,7 @@ class RecordedSimulation extends Simulation {
 
 	val headers_2 = Map(
 		"Accept-Encoding" -> "gzip, deflate",
-		"Origin" -> "http://ec2-54-92-231-114.compute-1.amazonaws.com:8080")
+		"Origin" -> BaseUrl )
 
     val uri1 = System.getProperty("uri")
 
@@ -44,7 +46,7 @@ class RecordedSimulation extends Simulation {
 			.formParam("tbREPLACE", "")
 			.formParam("tbGLOBAL", "on")
 			.formParam("_editedtext", "test")
-			.check(status.is(302)))
+			.check(status.is(200)))
 
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 }

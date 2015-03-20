@@ -1,6 +1,14 @@
 #!/bin/bash
 . ./credentials.txt
-set -x
+
+#setup the environment
+
+if [ ! -f ./profile_addition.sh ]; then
+	./install.sh
+	./profile_addition.sh
+else
+	./profile_addition.sh
+fi	
 # the Packer part
 PACKERBUILDLOG="../packer_build.log"
 TERRAFORMBUILDLOG="../terraform_build.log"
@@ -76,14 +84,14 @@ $CURLUPLOADCMD 2>&1 | tee ${CURLLOG}
 
 #install gatling first 
 
-if [ ! -d "./gatling-bundle" ]
-	then
-	mkdir ./gatling-bundle
-	curl https://oss.sonatype.org/content/repositories/snapshots/io/gatling/highcharts/gatling-charts-highcharts-bundle/2.2.0-SNAPSHOT/gatling-charts-highcharts-bundle-2.2.0-20150317.093647-1-bundle.zip | tar -xf- -C./gatling-bundle
-fi
+#if [ ! -d "./gatling-bundle" ]
+#	then
+#	curl https://oss.sonatype.org/content/repositories/snapshots/io/gatling/highcharts/gatling-charts-highcharts-bundle/2.2.0-SNAPSHOT/gatling-charts-highcharts-bundle-2.2.0-20150317.093647-1-bundle.zip | tar -xf- -C ./
+#	mv gatling-charts-highcharts-bundle-2.2.0-SNAPSHOT gatling-bundle
+#fi
 
 cd ./gatling
 
-export JAVA_OPTS="-Duri=http://allaccess:supersecret@${TOMCAT_HOST}:8080/JSPWiki/"
+export JAVA_OPTS="-Duri=http://allaccess:supersecret@${TOMCAT_HOST}:8080/JSPWiki/ -Dbaseurl=http://allaccess:supersecret@${TOMCAT_HOST}:8080/"
 
-../gatling-bundle/bin/gatling.sh -sf ./user-files/simulations/ --simulation barc1.RecordedSimulation -rf ./output/
+gatling.sh -sf ./user-files/simulations/ --simulation barc1.RecordedSimulation -rf ./output/

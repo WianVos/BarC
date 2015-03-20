@@ -1,4 +1,5 @@
 credentials_override.tf
+prereq/*
 credentials*
 *.tfstate*
 packer-log*
