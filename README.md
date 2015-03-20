@@ -16,14 +16,21 @@ The test runs through the following steps
 
 # useage
 create a credentials.txt file : 
-	AWS_ACCESS_KEY="AKIAIIJPYRBAHXKVIJSA"
-	WS_SECRET_KEY="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"
+```
+AWS_ACCESS_KEY="AKIAIIJPYRBAHXKVIJSA"
+WS_SECRET_KEY="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"
+```
 
 execute run.sh
+```
+/>./run.sh
+```
 
 and presto. 
 
 sit back .. relax and enjoy the show. 
+
+the results of the test are going to be in ./gatling/output
 
 
 
