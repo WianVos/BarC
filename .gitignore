@@ -8,3 +8,4 @@ tf-plugin*
 *.war
 output/*
 gatling-bundle
+profile_addition.sh
