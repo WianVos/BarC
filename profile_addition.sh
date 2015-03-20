@@ -1,2 +1,0 @@
-#!/bin/bash
-export PATH=/Users/wianvos/Tests/BarC/prereq/terraform:/Users/wianvos/Tests/BarC/prereq/packer:/Users/wianvos/Tests/BarC/gatling/bin:/Users/wianvos/.rvm/gems/ruby-1.9.3-p547/bin:/Users/wianvos/.rvm/gems/ruby-1.9.3-p547@global/bin:/Users/wianvos/.rvm/rubies/ruby-1.9.3-p547/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/wianvos/.rvm/bin:/Users/wianvos/Code/go/bin:/Users/wianvos/opt/gradle-2.3/bin:/Users/wianvos/tools/Terraform/:/Users/wianvos/tools/Packer/:/Users/wianvos/tools/gatling/bin/
