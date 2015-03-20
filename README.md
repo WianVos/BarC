@@ -17,8 +17,8 @@ The test runs through the following steps
 # useage
 create a credentials.txt file : 
 ```
-AWS_ACCESS_KEY="AKIAIIJPYRBAHXKVIJSA"
-WS_SECRET_KEY="JuE4J9lbHG3WZH+V+zBOMKAesLrugq365UpmHsb8"
+AWS_ACCESS_KEY="<your key goes here>"
+WS_SECRET_KEY="<your super secret key goes here>"
 ```
 
 execute run.sh
