@@ -60,4 +60,4 @@ cat <<EOF > profile_addition.sh
 export PATH=${PWD}/prereq/terraform:${PWD}/prereq/packer:${PWD}/gatling/bin:${PATH}
 EOF
 
-chmod +x profile_addition.sh
+chmod +x ./profile_addition.sh

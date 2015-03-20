@@ -1,34 +1,13 @@
 aws_security_group.barc-test: Refreshing state... (ID: sg-aff655c2)
 aws_key_pair.barc: Refreshing state... (ID: barc)
-aws_instance.tomcat_barc: Refreshing state... (ID: i-f7c69a07)
+aws_instance.tomcat_barc: Refreshing state... (ID: i-cdecb03d)
 aws_instance.tomcat_barc: Destroying...
 aws_instance.tomcat_barc: Destruction complete
-aws_instance.tomcat_barc: Creating...
-  ami:                        "" => "ami-60476808"
-  availability_zone:          "" => "<computed>"
-  block_device.#:             "" => "<computed>"
-  instance_type:              "" => "t1.micro"
-  key_name:                   "" => "barc"
-  private_dns:                "" => "<computed>"
-  private_ip:                 "" => "<computed>"
-  public_dns:                 "" => "<computed>"
-  public_ip:                  "" => "<computed>"
-  root_block_device.#:        "" => "<computed>"
-  security_groups.#:          "" => "1"
-  security_groups.3173051386: "" => "barc-test"
-  subnet_id:                  "" => "<computed>"
-  tenancy:                    "" => "<computed>"
-aws_instance.tomcat_barc: Creation complete
+Error applying plan:
 
-Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+aws_instance.tomcat_barc: diffs didn't match during apply. This is a bug with the resource provider, please report a bug.
 
-The state of your infrastructure has been saved to the path
-below. This state is required to modify and destroy your
-infrastructure, so keep it safe. To inspect the complete state
-use the `terraform show` command.
-
-State path: terraform.tfstate
-
-Outputs:
-
-  addressess = ec2-54-144-252-65.compute-1.amazonaws.com
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.
