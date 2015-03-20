@@ -1,3 +1,9 @@
 credentials_override.tf
 credentials*
 *.tfstate*
+packer-log*
+tf-plugin*
+*.log
+*.war
+output/*
+gatling-bundle

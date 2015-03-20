@@ -28,5 +28,8 @@ template "#{node["tomcat"]["config_dir"]}/tomcat-users.xml" do
     :users => TomcatCookbook.users,
     :roles => TomcatCookbook.roles,
   )
-  #notifies :restart, 'service[tomcat]'
+
+  #custom code wJv
+  #notifies :restart, "service[tomcat#{node['tomcat']['base_version']}]"
+  
 end

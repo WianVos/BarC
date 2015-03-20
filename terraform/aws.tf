@@ -41,10 +41,11 @@ resource "aws_instance" "tomcat_barc" {
   count = 1
   key_name = "${aws_key_pair.barc.key_name}"
   security_groups = ["${aws_security_group.barc-test.name}"]
+  
 }
 
 output "addressess" {
-  value = "Public DNS Addresses: ${aws_instance.tomcat_barc.public_dns}"
+  value = "${aws_instance.tomcat_barc.public_dns}"
 }
 
 

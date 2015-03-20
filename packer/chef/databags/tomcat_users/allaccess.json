@@ -3,6 +3,7 @@
   "password": "supersecret",
   "roles": [
     "manager-gui",
+    "manager-script",
     "admin"
   ]
 }
